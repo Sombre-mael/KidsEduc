@@ -1,0 +1,25 @@
+/******* Customized Bootstrap ********/
+
+$primary: #F4ECD6;
+$light: #D3A569;
+$dark: #704C26;
+
+$font-family-base: 'Heebo', sans-serif;
+
+$headings-font-family: 'Inter', sans-serif;
+
+$body-bg: $light;
+
+$body-color: #674E40;
+
+$headings-color: $dark;
+
+$enable-responsive-font-sizes: true;
+
+$border-radius: 10px;
+
+$link-decoration: none;
+
+$enable-negative-margins: true;
+
+@import "bootstrap/scss/bootstrap";
