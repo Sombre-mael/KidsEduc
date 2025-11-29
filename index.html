@@ -25,6 +25,28 @@
     .carousel-slide { flex-shrink: 0; width: 100%; }
     @keyframes slideIn { from { opacity: 0; transform: translateX(20px); } to { opacity: 1; transform: translateX(0); } }
     .carousel-slide { animation: slideIn 0.8s ease-in-out; }
+
+    /* bouton oval flottant chatbot */
+    #chatbotBtn {
+      position: fixed;
+      right: 32px;
+      bottom: 32px;
+      z-index: 100;
+      background: linear-gradient(90deg,#f59e0b,#fb923c);
+      color: #fff;
+      border: none;
+      border-radius: 999px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+      padding: 0.7em 2em;
+      font-size: 1.1em;
+      font-weight: bold;
+      cursor: pointer;
+      transition: box-shadow 0.2s;
+    }
+    #chatbotBtn:hover {
+      box-shadow: 0 8px 24px rgba(251,146,60,0.18);
+      background: linear-gradient(90deg,#fb923c,#f59e0b);
+    }
   </style>
 </head>
 <body class="min-h-screen font-sans text-gray-800">
@@ -41,7 +63,7 @@
         </div>
         <div>
           <div class="font-bold text-lg">Rafiki <span class="text-orange-500">Écolier</span></div>
-          <div class="text-xs text-gray-400">Apprenez, decouvrez et amusez en l'shi</div>
+          <div class="text-xs text-gray-400">Apprenez, decouvrez et amusez vous a l'shi</div>
         </div>
       </div>
 
@@ -58,6 +80,8 @@
   </header>
 
   <main class="max-w-6xl mx-auto px-4 py-8">
+    <!-- Bouton flottant Chatbot -->
+    <button id="chatbotBtn" title="Discuter avec le chatbot">Chatbot</button>
     <!-- Home view -->
     <section id="homeView">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -339,11 +363,16 @@
     <!-- footer -->
     <footer class="mt-10">
       <div class="bg-slate-900 text-slate-200 rounded-xl-clip p-6 text-center">
-        © 2024 Rafiki Écolier. Conçu pour l'éducation de la jeunesse congolaise.
+        © 2025 Rafiki Écolier. Conçu pour l'éducation de la jeunesse congolaise par Mael Kahilu et kevine.
       </div>
     </footer>
   </main>
   <script>
+    // Bouton flottant Chatbot
+    document.getElementById('chatbotBtn').addEventListener('click', function() {
+      // Remplace le lien ci-dessous par celui de ton chatbot
+      window.open('https://newhorizontech365.github.io/Chatbot-for-Student/', '_self');
+    });
     // Carrousel "Le saviez-vous"
     const carouselTrack = document.getElementById('carouselTrack');
     const slides = carouselTrack.querySelectorAll('.carousel-slide');
